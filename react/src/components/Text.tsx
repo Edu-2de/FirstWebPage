@@ -5,34 +5,37 @@ import { type VariantProps, tv } from "tailwind-variants";
 const textVariants = tv({
   base: ``,
   variants: {
-    size: {
-      sm: `text-sm font-sans`,
-      md: `text-lg font-sans`,
-      lg: `text-2xl font-bebas`,
-      xl: `text-2xl font-anton`
+    textSize: {
+      'sm': `text-sm font-sans`,
+      'sm-semi-bold': `text-sm font-sans font-semibold`,
+      'md': `text-lg font-sans`,
+      'lg': `text-2xl font-bebas`,
+      'xl': `text-4xl font-anton`,
+      'xxl': `text-[4rem] md:text-[6rem] lg:text-[7rem] font-anton`,
+      '2xl': `text-[4rem] md:text-[8rem] lg:text-[11rem] lg:tracking-wide font-anton`,
     },
-    color: {
-      black: `text-neutral-bege`,
-      gray: `text-neutral-dark-gray`,
-      primary: `text-primary-dark`,
-      secondary: `text-secondary`,
-    },
+    textColor: {
+      'primary': `text-primary`,
+      'secondary': `text-secondary`,
+
+    }
   },
   defaultVariants: {
-    size: 'sm',
-    color: 'black',
+    textSize: 'sm',
+    textColor: 'primary'
   },
 });
 
-export type TextProps = Omit<React.HTMLAttributes<HTMLSpanElement>, "color"> &
-  VariantProps<typeof textVariants> & {
-    asChild?: boolean;
-  };
+type TextVariantsProps = VariantProps<typeof textVariants>
+
+export interface TextProps extends React.ComponentProps<'div'>, TextVariantsProps{
+  asChild?: boolean
+}
 
 export default function Text({
   className,
-  size,
-  color,
+  textSize,
+  textColor,
   asChild = false,
   ...props
 }: TextProps) {
@@ -40,7 +43,7 @@ export default function Text({
 
   return (
     <Component
-      className={textVariants({ size, color, className })}
+      className={textVariants({ textSize, textColor, className })}
       {...props}
     />
   );
