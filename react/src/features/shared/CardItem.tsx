@@ -1,5 +1,5 @@
-import { tv, type VariantProps } from "tailwind-variants"
-import Text from "./Text"
+import { tv, type VariantProps } from 'tailwind-variants'
+import Text from '../../components/ui/Text'
 
 export interface ItemProps {
   title: string
@@ -15,27 +15,32 @@ const cardItemVariants = tv({
     title: 'uppercase tracking-wider font-bold',
     description: 'leading-relaxed opacity-80',
     image: 'w-full',
-  }
+  },
 })
 
 type CardItemVariants = VariantProps<typeof cardItemVariants>
 
-export interface CardItemProps extends React.ComponentProps<'div'>, CardItemVariants {
+export interface CardItemProps
+  extends React.ComponentProps<'div'>, CardItemVariants {
   item: ItemProps
 }
 
 export default function CardItem({ className, item, ...props }: CardItemProps) {
-  const { container, containterTexts, title, description, image } = cardItemVariants()
+  const { container, containterTexts, title, description, image } =
+    cardItemVariants()
 
   return (
     <div className={container({ className })} {...props}>
-
       <div className={containterTexts()}>
         <div className={title()}>
-          <Text textSize="xl" textColor="secondary">{item.title}</Text>
+          <Text textSize="xl" textColor="secondary">
+            {item.title}
+          </Text>
         </div>
         <div className={description()}>
-          <Text textSize="md" textColor="secondary">{item.description}</Text>
+          <Text textSize="md" textColor="secondary">
+            {item.description}
+          </Text>
         </div>
       </div>
 
@@ -46,7 +51,6 @@ export default function CardItem({ className, item, ...props }: CardItemProps) {
           className="w-full h-auto object-cover rounded-sm"
         />
       </div>
-
     </div>
   )
 }

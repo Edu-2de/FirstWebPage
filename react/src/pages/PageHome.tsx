@@ -1,8 +1,6 @@
-
-import Container from "../components/Container";
-import SectionIntro from "../components/home/SectionIntro";
-import SectionShoes from "../components/home/SectionShoes";
-
+import Container from '../components/ui/Container'
+import SectionIntro from '../features/home/SectionIntro'
+import SectionShoes from '../features/home/SectionShoes'
 
 export default function PageHome() {
   return (
