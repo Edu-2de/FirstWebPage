@@ -3,32 +3,13 @@
 @theme {
   --color-*: initial;
 
-  /* Neutros Originais */
-  --color-neutral-black: #263238;
-  --color-neutral-bege: #e1d2bc;
-  --color-neutral-dark-gray: #4D4D4D;
-  --color-neutral-light-gray: #89939E;
-  --color-neutral-gray-blue: #ABBED1;
-  --color-neutral-silver: #F5F7FA;
-  --color-neutral-white: #FFFFFF;
+  --color-primary: #000003;
+  --color-secondary: #f5f5f5;
 
-  /* Cores Principais Originais + Variações */
-  --color-primary: #ad2225;
-  --color-primary-light: #cf383b; /* Para hover no botão vermelho */
-  --color-primary-dark: #80181a;  /* Para textos sobre fundo vermelho */
-
-  --color-secondary: #263238;
-
-  --color-background: #9e886c;
-  --color-background-secondary: #8c8a97;
-  --color-background-tertiary: #899d7c;
-  --color-background-light: #f4e8c7;
-  --color-background-dark: #d5bd82;
+  --color-background: #fafbed;
+  --color-background-secondary: #0d0b0e;
 
 
-  --color-accent-mustard: #e5b13a;
-  --color-accent-denim: #4a6b8c;
-  --color-accent-forest: #2e5339;
 
   --font-sans: "Work Sans", sans-serif;
   --font-bebas: "Bebas Neue", sans-serif;
