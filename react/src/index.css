@@ -9,9 +9,7 @@
   --color-background: #fafbed;
   --color-background-secondary: #0d0b0e;
 
-
-
-  --font-sans: "Work Sans", sans-serif;
-  --font-bebas: "Bebas Neue", sans-serif;
-  --font-anton: "Anton", sans-serif;
+  --font-sans: 'Work Sans', sans-serif;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-anton: 'Anton', sans-serif;
 }
