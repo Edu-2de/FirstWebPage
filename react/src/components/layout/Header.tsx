@@ -13,7 +13,7 @@ const NAV_LINKS = [
 const headerVariants = tv({
   slots: {
     container:
-      'w-full bg-background gap-6 flex justify-between items-center xl:px-60 lg:py-6 p-6 fixed top-0 z-50 ',
+      ' w-full max-w-screen bg-background gap-6 flex justify-between items-center xl:px-60 lg:py-6 p-6 fixed top-0 z-50 ',
     nav: 'gap-8 hidden md:flex items-center',
     logo: ' relative',
     mobileButton: 'md:hidden flex items-center z-60 relative',
