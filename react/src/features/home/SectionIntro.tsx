@@ -14,7 +14,7 @@ export default function PageHome() {
       >
         <Text
           textSize="2xl"
-          className="leading-none lg:leading-50 xl:leading-normal text-center"
+          className="shrink-0! leading-none lg:leading-50 xl:leading-normal text-center"
         >
           NIKE SHOES HISTORY
         </Text>
@@ -28,9 +28,9 @@ export default function PageHome() {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row w-full gap-10 md:gap-20 xl:gap-2 xl:justify-between pt-12  lg:pt-6">
-        <div className="flex flex-col text-justify md:text-start justify-between gap-6 md:gap-2 xl:max-w-140">
-          <Text className="font-bold" textSize="lg">
+      <div className="flex flex-col md:flex-row w-full gap-10 md:gap-20 xl:gap-2 xl:justify-between md:justify-center pt-12  lg:pt-6">
+        <div className="flex flex-col text-justify md:text-start justify-between gap-6  md:max-w-140 ">
+          <Text className="font-bold" textSize="lg" textColor="primary">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </Text>
           <Text>

@@ -11,10 +11,11 @@ export interface ItemProps {
 const cardItemVariants = tv({
   slots: {
     container: 'w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center',
-    containterTexts: 'flex flex-col gap-4',
+    containerTexts: 'flex flex-col gap-4',
     title: 'uppercase tracking-wider font-bold',
     description: 'leading-relaxed opacity-80',
-    image: 'w-full',
+    imageContainer: 'flex justify-center items-center max-w-160 h-auto ',
+    image: 'rounded-lg object-cover md:h-80 md:w-120  lg:h-100 lg:w-280',
   },
 })
 
@@ -26,12 +27,18 @@ export interface CardItemProps
 }
 
 export default function CardItem({ className, item, ...props }: CardItemProps) {
-  const { container, containterTexts, title, description, image } =
-    cardItemVariants()
+  const {
+    container,
+    containerTexts,
+    title,
+    description,
+    imageContainer,
+    image,
+  } = cardItemVariants()
 
   return (
     <div className={container({ className })} {...props}>
-      <div className={containterTexts()}>
+      <div className={containerTexts()}>
         <div className={title()}>
           <Text textSize="xl" textColor="secondary">
             {item.title}
@@ -44,12 +51,8 @@ export default function CardItem({ className, item, ...props }: CardItemProps) {
         </div>
       </div>
 
-      <div className={image()}>
-        <img
-          src={item.image}
-          alt={item.title}
-          className="w-full h-auto object-cover rounded-sm"
-        />
+      <div className={imageContainer()}>
+        <img src={item.image} alt={item.title} className={image()} />
       </div>
     </div>
   )
